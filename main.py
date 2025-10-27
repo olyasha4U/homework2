@@ -1,37 +1,5 @@
-#3 РОБОТА З КІЛЬКОМА КЛАСАМИ.
-from functools import total_ordering
-from tkinter.font import names
-
-
-#Зв'язок класів - це взаємодія декількох класів одночасно
-
-# class Human:
-#     def __init__(self, name="Human", age=10):
-#         self.name=name
-#         self.age=age
-#
-# class Avto:
-#     def __init__(self,brand):
-#         self.brand=brand
-#         self.passengers = []
-#     def AddPassengers(self,human):
-#         self.passengers.append(human)
-#     def NamePassengers(self):
-#         if self.passengers!=[]:
-#             print(f"Names of {self.brand} passengers: ")
-#             for passenger in self.passengers:
-#                 print(passenger.name)
-#         else:
-#             print(f"There are no passengers in {self.brand}")
-
-# nick=Human("Nick")
-# kate=Human("Kate")
-# car= Avto("Audi")
-# car.AddPassengers(nick)
-# car.AddPassengers(kate)
-# car.NamePassengers()
-# homevw2
-# class Task:
+1
+# class Task
 #     def __init__(self, title="Вивчити Python", description="Прочитати главу про об’єктно-орієнтоване програмування",  deadline="2025-11-05", status="виконане"):
 #         self.title=title
 #         self.description=description
@@ -101,7 +69,9 @@ from tkinter.font import names
 #
 #
 #     def total_price(self):
-#         total = sum(p.price for p in self.products)
+#         total = 0
+#         for p in self.products:
+#             total += p.price
 #         return total
 #
 #     def show_products(self):
@@ -129,3 +99,41 @@ from tkinter.font import names
 # cart.delete_item("Навушники JBL Tune 510BT")
 #
 # cart.show_products()
+# 4
+# class Employee:
+#     def __init__(self, name, position, salary):
+#         self.name=name
+#         self.position=position
+#         self.salary=salary
+#
+# class Department:
+#     def __init__(self):
+#         self.employees=[]
+#     def add_employees(self, employee):
+#         self.employees.append(employee)
+#     def remove_employees(self, employee):
+#         if employee in self.employees:
+#             self.employees.remove(employee)
+#             return
+#     def total_salary(self):
+#         total = 0
+#         for s in self.employees:
+#             total += s.salary
+#         return  total
+#
+#     def show_employees(self):
+#         if self.employees:
+#             print(f"Загальна заробітня плата відділу:{self.total_salary()}")
+#         else:
+#             print("У відділі немає працівників.")
+#
+# em1 = Employee("Олег", "Директор", 67500)
+# em2 = Employee("Олександра", "Керівник", 67500)
+# em3 = Employee("Марія", "Менеджер", 35000)
+#
+# department=Department()
+# department.add_employees(em1)
+# department.add_employees(em2)
+# department.add_employees(em3)
+# department.remove_employees(em1)
+# department.show_employees()
